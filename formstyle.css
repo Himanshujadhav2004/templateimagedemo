@@ -1,0 +1,30 @@
+/* #cv-form{
+   display: none;
+} */
+.myimg{
+  
+   border: 1px solid red;
+}
+.background{
+   background-color:red;
+   color: white;
+}
+
+.row1{
+   display: flex;
+ 
+grid-gap: 20px;
+
+
+}
+#first{
+   min-width: 200px;
+   margin-left: -12px;
+}
+
+.card{
+   min-width: 200px;
+}
+#hidetemplatebtn{
+display: none;
+}

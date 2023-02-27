@@ -1,0 +1,91 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script src="html2pnglb.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<link rel="stylesheet" href="formstyle.css">
+</head>
+<body>
+	<div class="container" id="cv-template">
+		<div class="row1  " id="cv-template" >
+			<div class=" text-center background  " id="first" >
+				<img src="NoImage.jpg" class="img-fluid myimg mt-4" alt="">
+				<div class="container">
+					<p id="NameT">Himanshu Kailas Jadhav</p>
+					<p id="NumberT">+9112121212121</p>
+					<p id="addressT">Addess Janta Nagar</p>
+					<hr>
+					<p><a id="fbt" href="#1">www.facebook.com</a></p>
+					<p><a id="inst" href="#1">www.Instagram.com</a></p>
+					<p><a id="linkdt" href="#1">www.Linkdin.com</a></p>
+				</div>
+			</div>
+	   
+			<div class="  py-5 " id="second">
+				<h1 style="font-weight: 900;" class="text-center" id="NameT2">Himanshu Kailas Jadhav</h1>
+				<div class="card mt-4">
+					<div class="card-header background">
+					<h3>Objective</h3>
+					</div>
+					<div class="card-body" >
+						<p id="objectiveT">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, perspiciatis?</p>
+					</div>
+				</div>
+				<div class="card mt-4">
+					<div class="card-header background">
+					<h3>Work Expereance</h3>
+					</div>
+					<div class="card-body">
+						<ul id="weT">
+							<li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel iste voluptatibus rerum possimus ipsa obcaecati asperiores accusantium sed nihil aperiam?</li>
+						</ul>
+					</div>
+				</div>
+				<div class="card mt-4">
+					<div class="card-header background">
+					<h3>Acadmic Qulification</h3>
+					</div>
+					<div class="card-body">
+						<ul id="AcadmicT">
+							<li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel iste voluptatibus rerum possimus ipsa obcaecati asperiores accusantium sed nihil aperiam?</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		 
+		</div>
+        <input id="btn_convert" type="button" value="Convert to Image" />
+
+        <br />
+        <h3>Preview :</h3>
+        <div id="previewImg">
+<img src="" alt="" height="100px" width="100px" id="imges">
+        </div>
+   </div>
+
+   <script>$(document).ready(function () {
+    
+    $("#btn_convert").on('click', function () {
+        html2canvas(document.getElementById("cv-template"),
+            {
+                allowTaint: true,
+                useCORS: true
+            }).then(function (canvas) {
+                var anchorTag = document.getElementById("imges");
+				
+                document.body.appendChild(anchorTag);
+                document.getElementById("previewImg").appendChild(canvas);
+               
+            });
+    });
+
+});</script>
+
+</body>
+
+</html>
+ 
+                        
